@@ -12,3 +12,9 @@ pip install google-generativeai pydantic python-dotenv
 # requirements.txtを作成
 pip freeze > requirements.txt
 ```
+
+# 起動
+
+```
+uvicorn app.main:app --reload
+```
