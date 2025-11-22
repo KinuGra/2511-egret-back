@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.env
+*.venv/
+venv/
+ENV/
+env/
+Pipfile.lock
+poetry.lock
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# FastAPI / Uvicorn
+*.log
+
+# dotenv / secrets
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# ChromaDB (RAG用ベクトルストア)
+data/chroma_db/
+
+# Gemini キャッシュ（Google SDK）
+.genai/
+
+# その他
+*.sqlite3
+*.db
+*.bak
