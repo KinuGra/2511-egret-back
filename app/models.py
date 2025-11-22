@@ -13,4 +13,4 @@ class SnippetScore(BaseModel):
     conciseness: int
     logic: int
     feedback: str
-    total: int
+    total: int | None = None
