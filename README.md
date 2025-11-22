@@ -6,9 +6,7 @@ python -m venv venv
 source venv/bin/activate
 
 # ライブラリ
-pip install "fastapi[standard]" uvicorn openai chromadb pydantic-settings
-pip install google-generativeai pydantic python-dotenv
-pip install -q -U google-genai
+pip install "fastapi[standard]" uvicorn openai chromadb pydantic-settings python-dotenv google-genai
 
 # requirements.txtを作成
 pip freeze > requirements.txt
