@@ -4,6 +4,7 @@ from pydantic import BaseModel
 class SnippetInput(BaseModel):
     title: str | None = None
     content: str
+    byte_length: int
 
 
 class SnippetScore(BaseModel):
