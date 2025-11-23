@@ -7,6 +7,7 @@ source venv/bin/activate
 
 # ライブラリ
 pip install "fastapi[standard]" uvicorn openai chromadb pydantic-settings python-dotenv google-genai
+pip install chromadb
 
 # requirements.txtを作成
 pip freeze > requirements.txt
@@ -16,4 +17,10 @@ pip freeze > requirements.txt
 
 ```
 uvicorn app.main:app --reload
+```
+
+# RAG: 例データを一括登録するコマンド
+
+```
+python -m scripts.load_examples
 ```
