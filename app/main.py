@@ -1,10 +1,19 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import score_snippet
 from app.models import SnippetInput
 from app.rag_store import search_similar
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 本番は特定ドメインに
+    allow_credentials=True,
+    allow_methods=["*"],  # ← OPTIONS を含む全メソッドを許可
+    allow_headers=["*"],  # ← Content-Type も許可
+)
 
 
 @app.get("/hello")
